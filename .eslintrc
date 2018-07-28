@@ -1,0 +1,29 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "spread": true,
+      "restParams": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "extends": [
+    "./.globals.json",
+    "plugin:prettier/recommended",
+    "prettier/standard"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-undef":"error",
+    "no-redeclare":"error"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  }
+}
