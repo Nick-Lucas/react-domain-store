@@ -1,8 +1,8 @@
 {
-  "name": "model-store",
+  "name": "react-model-store",
   "version": "0.0.1",
   "description": "Domain based state store with side effects built in",
-  "main": "dist/model-store.js",
+  "main": "dist/react-model-store.js",
   "scripts": {
     "test": "gulp",
     "lint": "gulp lint",
@@ -14,26 +14,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nick-lucas/model-store.git"
+    "url": "https://github.com/nick-lucas/react-model-store.git"
   },
   "keywords": [],
   "author": "nick-lucas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nick-lucas/model-store/issues"
+    "url": "https://github.com/nick-lucas/react-model-store/issues"
   },
-  "homepage": "https://github.com/nick-lucas/model-store",
+  "homepage": "https://github.com/nick-lucas/react-model-store",
   "devDependencies": {
     "babel-core": "6.14.0",
     "babel-loader": "6.2.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "6.13.0",
     "babel-preset-latest": "6.14.0",
+    "babel-preset-react": "^6.24.1",
     "babel-register": "6.14.0",
     "chai": "3.5.0",
     "del": "2.2.2",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
     "glob": "7.0.6",
     "gulp": "3.9.1",
     "gulp-eslint": "3.0.1",
@@ -49,6 +51,7 @@
     "isparta": "4.0.0",
     "json-loader": "0.5.4",
     "mocha": "3.0.2",
+    "model-store": "file:../model-store.js/dist/",
     "prettier": "^1.13.7",
     "sinon": "1.17.5",
     "sinon-chai": "2.8.0",
@@ -59,5 +62,7 @@
     "entryFileName": "model-store.js",
     "mainVarName": "ModelStore"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^16.4.1"
+  }
 }
