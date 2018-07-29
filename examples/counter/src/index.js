@@ -26,9 +26,4 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
-model.addEventListener(e => {
-  console.log(e)
-  if (e.type === "update") {
-    console.log(e.result)
-  }
-})
+model.addEventListener(e => console.log(e))

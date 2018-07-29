@@ -14,9 +14,7 @@ export class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Count is {count}</h1>
-        </header>
+        <h1 className="App-title">Count is {count}</h1>
         <button onClick={increment}>
           Increment 
         </button>

@@ -2,6 +2,7 @@
   "presets": ["latest", "babel-preset-react"],
   "plugins": [
     "transform-object-rest-spread",
+    "transform-class-properties",
     "add-module-exports"
   ]
 }
