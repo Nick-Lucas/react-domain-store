@@ -9,12 +9,12 @@ import { Provider } from "react-model-store"
 const model = createModel({
   counter: createDomain({ count: 0 }, store => ({
     increment: () => {
-      const { count } = store.getState().counter
-      store.setState({counter: {count: count + 1}})
+      const { count } = store.getState()
+      return { count: count + 1 }
     },
     decrement: () => {
-      const { count } = store.getState().counter
-      store.setState({counter: {count: count - 1}})
+      const { count } = store.getState()
+      return { count: count - 1 }
     },
   }))
 })
