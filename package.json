@@ -52,12 +52,12 @@
     "isparta": "4.0.0",
     "json-loader": "0.5.4",
     "mocha": "3.0.2",
-    "model-store": "file:../model-store.js/dist/",
     "prettier": "^1.13.7",
     "sinon": "1.17.5",
     "sinon-chai": "2.8.0",
     "webpack": "1.13.2",
-    "webpack-stream": "3.2.0"
+    "webpack-stream": "3.2.0",
+    "model-store": "^0.0.0"
   },
   "babelBoilerplateOptions": {
     "entryFileName": "index.js",
