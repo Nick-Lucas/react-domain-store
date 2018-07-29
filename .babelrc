@@ -1,4 +1,7 @@
 {
   "presets": ["latest", "babel-preset-react"],
-  "plugins": ["transform-object-rest-spread"]
+  "plugins": [
+    "transform-object-rest-spread",
+    "add-module-exports"
+  ]
 }

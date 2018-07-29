@@ -3,10 +3,20 @@ import PropTypes from 'prop-types'
 import Context from './context'
 
 export default class Provider extends PureComponent {
+  componentDidMount() {
+    this.props.model.addEventListener(e => {
+      if (e.type === 'update') {
+        this.forceUpdate()
+      }
+    })
+  }
+
   render() {
     const { model } = this.props
     return (
-      <Context.Provider value={model}>
+      <Context.Provider
+        value={{ state: model.store.getState(), functions: model.functions }}
+      >
         {Children.only(this.props.children)}
       </Context.Provider>
     )
@@ -14,8 +24,8 @@ export default class Provider extends PureComponent {
 }
 
 Provider.propTypes = {
-  model: PropTypes.objectOf({
-    store: PropTypes.objectOf({
+  model: PropTypes.shape({
+    store: PropTypes.shape({
       getState: PropTypes.func.isRequired,
       setState: PropTypes.func.isRequired
     }),

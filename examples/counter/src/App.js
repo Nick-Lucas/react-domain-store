@@ -1,21 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-class App extends Component {
+import './App.css'
+
+import { connect } from "react-model-store"
+
+export class App extends Component {
   render() {
+    const { 
+      count, 
+      increment, 
+      decrement
+    } = this.props
+
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Count is {count}</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <button onClick={increment}>
+          Increment 
+        </button>
+        <button onClick={decrement}>
+          Decrement
+        </button>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default connect(
+  state => ({
+    count: state.counter.count
+  }), 
+  funcs => ({
+    increment: funcs.counter.increment,
+    decrement: funcs.counter.decrement
+  })
+)(App)

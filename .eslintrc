@@ -22,7 +22,8 @@
   "rules": {
     "prettier/prettier": "error",
     "no-undef":"error",
-    "no-redeclare":"error"
+    "no-redeclare":"error",
+    "react/display-name": "warn"
   },
   "env": {
     "browser": true,
