@@ -8,9 +8,18 @@ export class App extends Component {
   render() {
     const { 
       count, 
+      loading,
       increment, 
       decrement
     } = this.props
+
+    if (loading) {
+      return (
+        <div className="App">
+          <h1 className="App-title">Loading...</h1>
+        </div>
+      )
+    }
 
     return (
       <div className="App">
@@ -28,10 +37,15 @@ export class App extends Component {
 
 export default connect(
   state => ({
-    count: state.counter.count
+    count: state.counter.count,
+    loading: state.load.loading,
   }), 
   funcs => ({
-    increment: funcs.counter.increment,
+    increment: async () => {
+      await funcs.load.startLoad()
+      await funcs.counter.increment()
+      await funcs.load.endLoad()
+    },
     decrement: funcs.counter.decrement
   })
 )(App)

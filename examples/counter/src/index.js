@@ -9,12 +9,28 @@ import { Provider } from "react-model-store"
 const model = createModel({
   counter: createDomain({ count: 0 }, store => ({
     increment: () => {
-      const { count } = store.getState()
-      return { count: count + 1 }
+      // this function has to go call some server for 1000ms
+      return new Promise(resolve => setTimeout(() => resolve(), 1000))
+        .then(() => {
+          const { count } = store.getState()
+          return { count: count + 1 }
+        })
     },
     decrement: () => {
       const { count } = store.getState()
       return { count: count - 1 }
+    },
+  })),
+  load: createDomain({ loading: false }, store => ({
+    startLoad: () => {
+      return {
+        loading: true
+      }
+    },
+    endLoad: () => {
+      return {
+        loading: false
+      }
     },
   }))
 })
