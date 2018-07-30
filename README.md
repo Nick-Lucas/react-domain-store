@@ -17,7 +17,9 @@ For a full example, check out the `examples/` folder, but the basic API is very 
 // Create a model, as documented in the main repo
 const model = createModel({
   counter: createDomain({ count: 0 }, store => ({
-    increment: () => {
+    increment: async () => {
+      // async is supported natively
+      await doSomeAsyncWork()
       const { count } = store.getState()
       return { count: count + 1 }
     },
@@ -41,7 +43,8 @@ ReactDOM.render(
 )
 
 // Connect any component to the store which you 
-// want state or functions injected into
+// want state or functions injected into.
+// All functions are made async by model-store
 import { connect } from "react-model-store"
 
 class App extends React.Component { /* ... */ }
