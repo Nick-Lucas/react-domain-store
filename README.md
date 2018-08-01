@@ -1,3 +1,6 @@
+
+[![npm](https://img.shields.io/npm/v/react-domain-store.svg)](https://www.npmjs.com/package/react-domain-store)
+
 # react-domain-store
 
 ### About
