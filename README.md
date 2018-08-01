@@ -9,6 +9,14 @@ This package provides react bindings for [domain-store](https://github.com/Nick-
 
 For more information about the motivations of this project, check out the main repo.
 
+### Installation
+
+    yarn add domain-store react-domain-store
+    
+    or
+    
+    npm install --save domain-store react-domain-store
+
 ### API
 
 This package is intended to feel familiar to redux users, and the API reflects this.
@@ -18,21 +26,7 @@ For a full example, check out the `examples/` folder, but the basic API is very 
 ```js
 
 // Create a model, as documented in the main repo
-const model = createModel({
-  counter: createDomain({ count: 0 }, store => ({
-    increment: async () => {
-      // async is supported natively
-      await doSomeAsyncWork()
-      const { count } = store.getState()
-      return { count: count + 1 }
-    },
-    decrement: () => {
-      const { count } = store.getState()
-      return { count: count - 1 }
-    },
-  }))
-})
-
+const model = createModel( /* ... */ )
 
 // Import the Provider component and render 
 // it with the model
