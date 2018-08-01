@@ -2,7 +2,7 @@
 
 ### About
 
-This package provides react bindings for [model-store.js](https://github.com/Nick-Lucas/model-store.js)
+This package provides react bindings for [model-store](https://github.com/Nick-Lucas/model-store)
 
 For more information about the motivations of this project, check out the main repo.
 
@@ -62,8 +62,8 @@ export default connect(
 
 ### Development
 
-React bindings for model-store.js
+React bindings for model-store
 
-For development, checkout [model-store](https://github.com/Nick-Lucas/model-store.js) and run `yarn link` or `npm link`
+For development, checkout [model-store](https://github.com/Nick-Lucas/model-store) and run `yarn link` or `npm link`
 
 In this repo run `yarn link model-store` or `npm link model-store`
