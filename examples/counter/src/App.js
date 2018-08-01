@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import './App.css'
 
-import { connect } from "react-model-store"
+import { connect } from "react-domain-store"
 
 export class App extends Component {
   render() {

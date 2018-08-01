@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import AppCon from './App'
 
-import { createModel, createDomain } from "model-store"
-import { Provider } from "react-model-store"
+import { createModel, createDomain } from "domain-store"
+import { Provider } from "react-domain-store"
 
 const model = createModel({
   counter: createDomain({ count: 0 }, store => ({

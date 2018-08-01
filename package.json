@@ -1,5 +1,5 @@
 {
-  "name": "react-model-store",
+  "name": "react-domain-store",
   "version": "0.0.1",
   "description": "Domain based state store with side effects built in",
   "main": "dist/index.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nick-lucas/react-model-store.git"
+    "url": "https://github.com/nick-lucas/react-domain-store.git"
   },
   "keywords": [],
   "author": "nick-lucas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nick-lucas/react-model-store/issues"
+    "url": "https://github.com/nick-lucas/react-domain-store/issues"
   },
-  "homepage": "https://github.com/nick-lucas/react-model-store",
+  "homepage": "https://github.com/nick-lucas/react-domain-store",
   "devDependencies": {
     "babel-core": "6.14.0",
     "babel-eslint": "^8.2.6",
@@ -63,7 +63,7 @@
     "webpack-stream": "3.2.0"
   },
   "peerDependencies": {
-    "model-store": "^0.0.0"
+    "domain-store": "^0.0.0"
   },
   "babelBoilerplateOptions": {
     "entryFileName": "index.js",

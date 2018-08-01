@@ -1,8 +1,8 @@
-# react-model-store
+# react-domain-store
 
 ### About
 
-This package provides react bindings for [model-store](https://github.com/Nick-Lucas/model-store)
+This package provides react bindings for [domain-store](https://github.com/Nick-Lucas/domain-store)
 
 For more information about the motivations of this project, check out the main repo.
 
@@ -33,7 +33,7 @@ const model = createModel({
 
 // Import the Provider component and render 
 // it with the model
-import { Provider } from "react-model-store"
+import { Provider } from "react-domain-store"
 
 ReactDOM.render(
   <Provider model={model}>
@@ -44,8 +44,8 @@ ReactDOM.render(
 
 // Connect any component to the store which you 
 // want state or functions injected into.
-// All functions are made async by model-store
-import { connect } from "react-model-store"
+// All functions are made async by domain-store
+import { connect } from "react-domain-store"
 
 class App extends React.Component { /* ... */ }
 
@@ -62,8 +62,8 @@ export default connect(
 
 ### Development
 
-React bindings for model-store
+React bindings for domain-store
 
-For development, checkout [model-store](https://github.com/Nick-Lucas/model-store) and run `yarn link` or `npm link`
+For development, checkout [domain-store](https://github.com/Nick-Lucas/domain-store) and run `yarn link` or `npm link`
 
-In this repo run `yarn link model-store` or `npm link model-store`
+In this repo run `yarn link domain-store` or `npm link domain-store`
